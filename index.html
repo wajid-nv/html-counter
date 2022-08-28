@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>*{margin:0;padding:0;box-sizing:border-box;user-select:none}body{background-color:black;color:white;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;font-family:sans-serif}.container{border:1px solid white;display:flex;padding:100px;border-radius:20px;align-items:center}.button{font-size:3.5rem;color:whitesmoke;border:2px solid whitesmoke;border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:600;transition:.2s}.button:hover{background-color:whitesmoke;color:black}#count{font-size:4rem;margin:0 50px;font-weight:900}</style>
+<title>Counter</title>
+</head>
+<body>
+<div class=container>
+<div class=button onclick="updateCount('-')">&minus;</div>
+<div id=count>27</div>
+<div class=button onclick="updateCount('+')">&plus;</div>
+</div>
+<script>let count=document.getElementById("count");let countVal=0;document.onload(updateCount(0));function updateCount(a){if(a=="+"){countVal++;count.innerHTML=countVal}else{if(a=="-"){if(countVal<1){countVal=0}else{countVal--}count.innerHTML=countVal}else{count.innerHTML=countVal}}};</script>
+</body>
+</html>
